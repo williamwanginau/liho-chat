@@ -3,7 +3,7 @@ import { useData } from "../hooks/useData";
 import ItemList from "./ItemList";
 
 const Chats = ({ selectedItem, onItemSelect }) => {
-  const { friendsData, groupsData, loading } = useData();
+  const { friendsData, groupsData, loading, error } = useData();
   const [searchTerm, setSearchTerm] = useState("");
 
   const chatsList = useMemo(() => {
@@ -29,6 +29,15 @@ const Chats = ({ selectedItem, onItemSelect }) => {
 
   if (loading) {
     return <div className="loading">Loading chats...</div>;
+  }
+
+  if (error) {
+    return (
+      <div className="error">
+        <p>❌ {error}</p>
+        <p>Please make sure the backend server is running on port 3001</p>
+      </div>
+    );
   }
 
   return (
