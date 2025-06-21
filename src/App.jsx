@@ -14,6 +14,7 @@ import Chats from "./components/Chats";
 import AddFriends from "./components/AddFriends";
 import Settings from "./components/Settings";
 import More from "./components/More";
+import ChatRoom from "./components/ChatRoom";
 
 // Main App component that contains the layout
 function AppContent() {
@@ -142,26 +143,7 @@ function AppContent() {
       </div>
 
       {/* Chat area */}
-      <div className="chat-area">
-        {selectedItem ? (
-          <div className="chat-content">
-            <div className="chat-header">
-              <h2>{selectedItem.name}</h2>
-              {selectedItem.members && (
-                <span>({selectedItem.members} members)</span>
-              )}
-            </div>
-            <div className="chat-messages">
-              <p>Start chatting!</p>
-            </div>
-          </div>
-        ) : (
-          <div className="empty-chat">
-            <div className="app-logo">LIHO</div>
-            <p>Start chatting!</p>
-          </div>
-        )}
-      </div>
+      <ChatRoom selectedItem={selectedItem} />
     </div>
   );
 }

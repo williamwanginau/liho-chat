@@ -15,9 +15,8 @@ const SETTINGS_OPTIONS = [
 ];
 
 const Settings = () => {
-  const handleSettingClick = (setting) => {
-    console.log(`Clicked: ${setting.label}`);
-    // Add functionality here for each setting
+  const handleSettingClick = () => {
+    // TODO: Implement actual functionality for each setting
   };
 
   return (

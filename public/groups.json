@@ -3,72 +3,72 @@
     "id": 101,
     "name": "Gaming Group",
     "members": 5,
-    "avatar": "sports_esports",
-    "avatarType": "icon",
+    "avatar": "🎮",
+    "avatarType": "emoji",
     "color": "#9B59B6"
   },
   {
     "id": 102,
     "name": "Food Meetup",
     "members": 5,
-    "avatar": "outdoor_grill",
-    "avatarType": "icon",
+    "avatar": "🍔",
+    "avatarType": "emoji",
     "color": "#E74C3C"
   },
   {
     "id": 103,
     "name": "Dinner Party",
     "members": 5,
-    "avatar": "restaurant",
-    "avatarType": "icon",
+    "avatar": "🍽️",
+    "avatarType": "emoji",
     "color": "#F39C12"
   },
   {
     "id": 104,
     "name": "Discussion Group A",
     "members": 13,
-    "avatar": "park",
-    "avatarType": "icon",
+    "avatar": "💬",
+    "avatarType": "emoji",
     "color": "#27AE60"
   },
   {
     "id": 105,
     "name": "Activity Team",
     "members": 14,
-    "avatar": "emoji_events",
-    "avatarType": "icon",
+    "avatar": "🏆",
+    "avatarType": "emoji",
     "color": "#E67E22"
   },
   {
     "id": 106,
     "name": "Photography Club",
     "members": 12,
-    "avatar": "photo_camera",
-    "avatarType": "icon",
+    "avatar": "📸",
+    "avatarType": "emoji",
     "color": "#3498DB"
   },
   {
     "id": 107,
     "name": "Group 123",
     "members": 12,
-    "avatar": "celebration",
-    "avatarType": "icon",
+    "avatar": "🎉",
+    "avatarType": "emoji",
     "color": "#E91E63"
   },
   {
     "id": 108,
     "name": "Study Group",
     "members": 5,
-    "avatar": "favorite",
-    "avatarType": "icon",
+    "avatar": "📚",
+    "avatarType": "emoji",
     "color": "#FF5722"
   },
   {
     "id": 109,
     "name": "Class Group",
     "members": 11,
-    "avatar": "school",
-    "avatarType": "icon",
+    "avatar": "🎓",
+    "avatarType": "emoji",
     "color": "#607D8B"
   }
 ]

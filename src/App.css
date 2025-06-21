@@ -354,38 +354,7 @@ body {
   overflow: hidden;
 }
 
-.chat-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
 
-.chat-header {
-  padding: 20px;
-  border-bottom: 1px solid #3a3a3a;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.chat-header h2 {
-  font-size: 20px;
-  font-weight: 500;
-}
-
-.chat-header span {
-  color: #888;
-  font-size: 14px;
-}
-
-.chat-messages {
-  flex: 1;
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #888;
-}
 
 /* Empty chat state */
 .empty-chat {
@@ -409,7 +378,7 @@ body {
   align-items: center;
   justify-content: center;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
+  }
 
 .empty-chat p {
   color: #888;
@@ -524,7 +493,7 @@ body {
   padding: 20px;
   height: 100%;
   overflow-y: auto;
-}
+  }
 
 .add-friends-header,
 .settings-header,

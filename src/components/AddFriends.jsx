@@ -11,9 +11,8 @@ const ADD_FRIENDS_OPTIONS = [
 ];
 
 const AddFriends = () => {
-  const handleOptionClick = (option) => {
-    console.log(`Clicked: ${option.label}`);
-    // Add functionality here for each option
+  const handleOptionClick = () => {
+    // TODO: Implement actual functionality for each option
   };
 
   return (

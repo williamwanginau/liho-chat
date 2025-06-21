@@ -26,15 +26,12 @@ const MORE_OPTIONS = [
 
 const More = () => {
   const handleOptionClick = (option) => {
-    console.log(`Clicked: ${option.label}`);
-
     if (option.id === "logout") {
       if (confirm("Are you sure you want to logout?")) {
-        // Handle logout
-        console.log("User logged out");
+        // TODO: Implement actual logout functionality
       }
     }
-    // Add functionality here for each option
+    // TODO: Add functionality here for each option
   };
 
   return (
