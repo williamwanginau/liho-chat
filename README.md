@@ -1,138 +1,147 @@
 # LIHO Chat 💬
 
-一個現代化的聊天應用程式，模仿LINE的介面設計，採用前後端分離架構。
+A modern chat application with clean and intuitive interface design, built with a separated frontend and backend architecture.
 
-## 🏗️ 專案架構
+## 🏗️ Project Architecture
 
 ```
-LIHO-CHAT/                    # 主專案目錄
-├── frontend/                 # 前端React應用
-│   ├── src/                 # 前端源碼
-│   │   ├── components/      # React組件
-│   │   ├── services/        # API服務層
-│   │   └── hooks/           # 自定義Hooks
-│   ├── public/              # 靜態資源
-│   ├── package.json         # 前端依賴管理
-│   └── vite.config.js       # Vite配置
-├── backend/                  # 後端Express.js API
-│   ├── routes/              # API路由
-│   ├── data/                # JSON數據文件
-│   ├── middleware/          # 中間件
-│   ├── package.json         # 後端依賴管理
-│   └── server.js            # Express主服務器
-├── README.md                # 專案說明文件
-└── .gitignore              # Git忽略文件
+LIHO-CHAT/                    # Main project directory
+├── frontend/                 # Frontend React application
+│   ├── src/                 # Frontend source code
+│   │   ├── components/      # React components
+│   │   ├── services/        # API service layer
+│   │   └── hooks/           # Custom hooks
+│   ├── public/              # Static assets
+│   ├── package.json         # Frontend dependency management
+│   └── vite.config.js       # Vite configuration
+├── backend/                  # Backend Express.js API
+│   ├── routes/              # API routes
+│   ├── data/                # JSON data files
+│   ├── middleware/          # Middleware
+│   ├── package.json         # Backend dependency management
+│   └── server.js            # Express main server
+├── README.md                # Project documentation
+└── .gitignore              # Git ignore file
 ```
 
-## 🚀 快速開始
+## 🚀 Getting Started
 
-### 前置條件
-- Node.js (v16+)
-- npm 或 yarn
+### Prerequisites
+- Node.js (v18+)
+- npm or yarn
 
-### 1️⃣ 啟動後端服務器
+### 🎯 One-Click Start (Recommended)
 
 ```bash
-# 進入後端目錄
-cd backend
+# Install all dependencies
+npm run install:all
 
-# 安裝依賴
-npm install
-
-# 啟動開發服務器
+# Start both frontend and backend services
 npm run dev
 ```
 
-🟢 後端將在 `http://localhost:3001` 運行
+🟢 This will start both:
+- Frontend application: http://localhost:5173 (or next available port)
+- Backend API: http://localhost:3001
 
-### 2️⃣ 啟動前端應用
+### 🔧 Running Services Separately
+
+If you prefer to control frontend and backend services separately:
+
+#### 1️⃣ Start Backend Server
 
 ```bash
-# 進入前端目錄（新開一個終端）
-cd frontend
-
-# 安裝依賴
-npm install
-
-# 啟動開發服務器
-npm run dev
+npm run dev:backend
 ```
 
-🟢 前端將在 `http://localhost:5173` 運行
+#### 2️⃣ Start Frontend Application
 
-### 3️⃣ 測試連接
+```bash
+npm run dev:frontend
+```
 
-- 🌐 前端應用：http://localhost:5173
-- ⚡ 後端API：http://localhost:3001/api/health
+### 📋 Available Commands
 
-## ✨ 功能特點
+- `npm run dev` - Start both frontend and backend
+- `npm run dev:frontend` - Start frontend only
+- `npm run dev:backend` - Start backend only
+- `npm run install:all` - Install all dependencies
+- `npm run build` - Build frontend for production
+- `npm run start` - Start production services
 
-### ✅ 已實現
-- 🎨 LINE風格的現代化UI/UX
-- 👥 朋友列表管理與搜尋
-- 👨‍👩‍👧‍👦 群組聊天功能
-- 💬 即時聊天介面
-- 📱 完全響應式設計
-- 🔍 智能搜尋功能
-- 🤖 AI自動回覆（模擬）
-- 🌙 深色主題界面
+### 3️⃣ Test Connection
 
-### 🚧 開發中
-- 🗄️ 資料庫整合 (MongoDB/PostgreSQL)
-- 🔐 JWT用戶認證系統
-- 🔄 WebSocket即時通訊
-- 📁 檔案上傳與分享
-- 🔔 即時推播通知
+- 🌐 Frontend application: http://localhost:5173
+- ⚡ Backend API: http://localhost:3001/api/health
 
-## 🔌 API文檔
+## ✨ Features
 
-### 健康檢查
-- `GET /api/health` - 服務器狀態檢查
+### ✅ Implemented
+- 🎨 Modern and elegant UI/UX design
+- 👥 Friends list management and search
+- 👨‍👩‍👧‍👦 Group chat functionality
+- 💬 Real-time chat interface
+- 📱 Fully responsive design
+- 🔍 Smart search functionality
+- 🤖 AI auto-reply (simulated)
+- 🌙 Dark theme interface
 
-### 朋友管理
-- `GET /api/friends` - 獲取所有朋友列表
-- `GET /api/friends/:id` - 獲取特定朋友資訊
+### 🚧 In Development
+- 🗄️ Database integration (MongoDB/PostgreSQL)
+- 🔐 JWT user authentication system
+- 🔄 WebSocket real-time communication
+- 📁 File upload and sharing
+- 🔔 Real-time push notifications
 
-### 群組管理
-- `GET /api/groups` - 獲取所有群組列表
+## 🔌 API Documentation
 
-### 訊息系統
-- `GET /api/messages` - 獲取聊天記錄
-- `POST /api/messages` - 發送新訊息
+### Health Check
+- `GET /api/health` - Server status check
 
-### 聊天功能
-- `GET /api/chats` - 獲取所有聊天（朋友+群組）
+### Friends Management
+- `GET /api/friends` - Get all friends list
+- `GET /api/friends/:id` - Get specific friend information
 
-### 認證系統（準備中）
-- `POST /api/auth/login` - 用戶登入
-- `POST /api/auth/logout` - 用戶登出
+### Group Management
+- `GET /api/groups` - Get all groups list
 
-## 🛠️ 技術棧
+### Messaging System
+- `GET /api/messages` - Get chat history
+- `POST /api/messages` - Send new message
 
-### 前端技術
-- **React 19** - 現代化UI框架
-- **React Router DOM** - 客戶端路由
-- **CSS3** - 響應式樣式設計
-- **Material Icons** - 一致的圖標系統
-- **Vite** - 高效能建置工具
+### Chat Functionality
+- `GET /api/chats` - Get all chats (friends + groups)
 
-### 後端技術
-- **Node.js** - JavaScript運行環境
-- **Express.js** - Web應用框架
-- **CORS** - 跨域資源共享
-- **Helmet** - 安全性中間件
-- **Morgan** - HTTP請求日誌
+### Authentication System (Coming Soon)
+- `POST /api/auth/login` - User login
+- `POST /api/auth/logout` - User logout
 
-### 計劃技術
-- **MongoDB/PostgreSQL** - 數據持久化
-- **JWT** - 安全認證
-- **Socket.io** - 即時雙向通訊
-- **Redis** - 高效能快取
-- **Docker** - 容器化部署
+## 🛠️ Technology Stack
 
-## 📂 數據結構
+### Frontend Technologies
+- **React 19** - Modern UI framework
+- **React Router DOM** - Client-side routing
+- **CSS3** - Responsive styling
+- **Material Icons** - Consistent icon system
+- **Vite** - High-performance build tool
 
-### 朋友資料 (friends.json)
+### Backend Technologies
+- **Node.js** - JavaScript runtime environment
+- **Express.js** - Web application framework
+- **CORS** - Cross-origin resource sharing
+- **Helmet** - Security middleware
+- **Morgan** - HTTP request logging
+
+### Planned Technologies
+- **MongoDB/PostgreSQL** - Data persistence
+- **JWT** - Secure authentication
+- **Socket.io** - Real-time bidirectional communication
+- **Redis** - High-performance caching
+- **Docker** - Containerized deployment
+
+## 📂 Data Structure
+
+### Friends Data (friends.json)
 ```json
 {
   "id": 1,
@@ -144,7 +153,7 @@ npm run dev
 }
 ```
 
-### 群組資料 (groups.json)
+### Groups Data (groups.json)
 ```json
 {
   "id": 101,
@@ -156,7 +165,7 @@ npm run dev
 }
 ```
 
-### 訊息資料 (messages.json)
+### Messages Data (messages.json)
 ```json
 {
   "id": 1,
@@ -168,65 +177,65 @@ npm run dev
 }
 ```
 
-## 🔄 開發流程
+## 🔄 Development Workflow
 
-### 前端開發
-1. 在 `frontend/src/` 目錄開發React組件
-2. 透過 `services/api.js` 調用後端API
-3. 使用React Hooks管理狀態
+### Frontend Development
+1. Develop React components in `frontend/src/` directory
+2. Call backend APIs through `services/api.js`
+3. Manage state using React Hooks
 
-### 後端開發
-1. 在 `backend/routes/` 建立API端點
-2. 在 `backend/data/` 管理JSON數據
-3. 透過Express中間件處理請求
+### Backend Development
+1. Create API endpoints in `backend/routes/`
+2. Manage JSON data in `backend/data/`
+3. Handle requests through Express middleware
 
-### 全棧整合
-1. 前端透過HTTP調用後端API
-2. 後端提供RESTful API服務
-3. 共享數據格式與介面規範
+### Full-Stack Integration
+1. Frontend calls backend APIs via HTTP
+2. Backend provides RESTful API services
+3. Shared data formats and interface specifications
 
-## 📈 開發路線圖
+## 📈 Development Roadmap
 
-### 🎯 Phase 1 - 基礎功能 (已完成)
-- [x] 前後端分離架構
-- [x] 基本UI/UX設計
-- [x] 朋友與群組管理
-- [x] 模擬聊天功能
+### 🎯 Phase 1 - Basic Features (Completed)
+- [x] Frontend-backend separated architecture
+- [x] Basic UI/UX design
+- [x] Friends and groups management
+- [x] Simulated chat functionality
 
-### 🎯 Phase 2 - 核心功能 (進行中)
-- [ ] 資料庫整合
-- [ ] 用戶認證系統
-- [ ] 真實訊息發送
-- [ ] 檔案上傳功能
+### 🎯 Phase 2 - Core Features (In Progress)
+- [ ] Database integration
+- [ ] User authentication system
+- [ ] Real message sending
+- [ ] File upload functionality
 
-### 🎯 Phase 3 - 進階功能 (計劃中)
-- [ ] WebSocket即時通訊
-- [ ] 訊息加密
-- [ ] 推播通知
-- [ ] 群組管理進階功能
+### 🎯 Phase 3 - Advanced Features (Planned)
+- [ ] WebSocket real-time communication
+- [ ] Message encryption
+- [ ] Push notifications
+- [ ] Advanced group management features
 
-### 🎯 Phase 4 - 擴展功能 (未來)
-- [ ] 行動端應用 (React Native)
-- [ ] 語音/視訊通話
-- [ ] AI聊天機器人
-- [ ] 多語言支援
+### 🎯 Phase 4 - Extended Features (Future)
+- [ ] Mobile application (React Native)
+- [ ] Voice/video calls
+- [ ] AI chatbot
+- [ ] Multi-language support
 
-## 🤝 貢獻指南
+## 🤝 Contributing Guidelines
 
-1. Fork此專案
-2. 建立功能分支 (`git checkout -b feature/amazing-feature`)
-3. 提交更改 (`git commit -m 'Add amazing feature'`)
-4. 推送分支 (`git push origin feature/amazing-feature`)
-5. 建立Pull Request
+1. Fork this project
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Create a Pull Request
 
-## 📄 授權條款
+## 📄 License
 
-MIT License - 詳見 [LICENSE](LICENSE) 文件
+MIT License - See [LICENSE](LICENSE) file for details
 
-## 📞 聯絡資訊
+## 📞 Contact Information
 
-如有問題或建議，歡迎建立Issue或聯繫開發團隊。
+For questions or suggestions, feel free to create an Issue or contact the development team.
 
 ---
 
-**LIHO Chat** - 讓溝通更簡單、更有趣！ 💬✨
+**LIHO Chat** - Making communication simpler and more fun! 💬✨
