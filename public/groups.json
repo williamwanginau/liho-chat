@@ -1,0 +1,74 @@
+[
+  {
+    "id": 101,
+    "name": "Gaming Group",
+    "members": 5,
+    "avatar": "sports_esports",
+    "avatarType": "icon",
+    "color": "#9B59B6"
+  },
+  {
+    "id": 102,
+    "name": "Food Meetup",
+    "members": 5,
+    "avatar": "outdoor_grill",
+    "avatarType": "icon",
+    "color": "#E74C3C"
+  },
+  {
+    "id": 103,
+    "name": "Dinner Party",
+    "members": 5,
+    "avatar": "restaurant",
+    "avatarType": "icon",
+    "color": "#F39C12"
+  },
+  {
+    "id": 104,
+    "name": "Discussion Group A",
+    "members": 13,
+    "avatar": "park",
+    "avatarType": "icon",
+    "color": "#27AE60"
+  },
+  {
+    "id": 105,
+    "name": "Activity Team",
+    "members": 14,
+    "avatar": "emoji_events",
+    "avatarType": "icon",
+    "color": "#E67E22"
+  },
+  {
+    "id": 106,
+    "name": "Photography Club",
+    "members": 12,
+    "avatar": "photo_camera",
+    "avatarType": "icon",
+    "color": "#3498DB"
+  },
+  {
+    "id": 107,
+    "name": "Group 123",
+    "members": 12,
+    "avatar": "celebration",
+    "avatarType": "icon",
+    "color": "#E91E63"
+  },
+  {
+    "id": 108,
+    "name": "Study Group",
+    "members": 5,
+    "avatar": "favorite",
+    "avatarType": "icon",
+    "color": "#FF5722"
+  },
+  {
+    "id": 109,
+    "name": "Class Group",
+    "members": 11,
+    "avatar": "school",
+    "avatarType": "icon",
+    "color": "#607D8B"
+  }
+]
