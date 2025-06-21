@@ -12,6 +12,7 @@ import friendsRoutes from "./routes/friends.js";
 import groupsRoutes from "./routes/groups.js";
 import messagesRoutes from "./routes/messages.js";
 import chatsRoutes from "./routes/chats.js";
+import devRoutes from "./routes/dev.js";
 
 // Load environment variables
 dotenv.config();
@@ -44,6 +45,7 @@ app.use("/api/friends", friendsRoutes);
 app.use("/api/groups", groupsRoutes);
 app.use("/api/messages", messagesRoutes);
 app.use("/api/chats", chatsRoutes);
+app.use("/api/dev", devRoutes);
 
 // Health check endpoint
 app.get("/api/health", (req, res) => {

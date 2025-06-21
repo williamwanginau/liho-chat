@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1001,
+    "name": "Dev Alice",
+    "status": "🔧 Development Mode",
+    "avatar": "👩‍💻",
+    "avatarType": "emoji",
+    "color": "#FF6B6B"
+  },
+  {
+    "id": 1002,
+    "name": "Test Bob",
+    "status": "🧪 Testing Features",
+    "avatar": "👨‍🔬",
+    "avatarType": "emoji",
+    "color": "#4ECDC4"
+  },
+  {
+    "id": 1003,
+    "name": "Mock Charlie",
+    "status": "📱 Mock Data Active",
+    "avatar": "🤖",
+    "avatarType": "emoji",
+    "color": "#45B7D1"
+  },
+  {
+    "id": 1004,
+    "name": "Debug Diana",
+    "status": "🐛 Bug Hunter",
+    "avatar": "🕵️‍♀️",
+    "avatarType": "emoji",
+    "color": "#96CEB4"
+  },
+  {
+    "id": 1005,
+    "name": "API Eddie",
+    "status": "🌐 API Tester",
+    "avatar": "👨‍💼",
+    "avatarType": "emoji",
+    "color": "#FFEAA7"
+  }
+]

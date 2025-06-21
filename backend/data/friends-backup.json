@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "name": "Alice",
+    "status": "Keep",
+    "avatar": "👩",
+    "avatarType": "emoji",
+    "color": "#5B8C5A"
+  },
+  {
+    "id": 2,
+    "name": "Bob",
+    "status": "Available",
+    "avatar": "👨",
+    "avatarType": "emoji",
+    "color": "#6B4C7A"
+  },
+  {
+    "id": 3,
+    "name": "Charlie",
+    "status": "Working from home",
+    "avatar": "👦",
+    "avatarType": "emoji",
+    "color": "#4A7C7E"
+  },
+  {
+    "id": 4,
+    "name": "Diana",
+    "status": "In a meeting",
+    "avatar": "👧",
+    "avatarType": "emoji",
+    "color": "#E07A5F"
+  },
+  {
+    "id": 5,
+    "name": "Emma",
+    "status": "(* ¸¸)",
+    "avatar": "🙋‍♀️",
+    "avatarType": "emoji",
+    "color": "#F2CC8F"
+  },
+  {
+    "id": 6,
+    "name": "Frank",
+    "status": "Busy",
+    "avatar": "🧑‍💼",
+    "avatarType": "emoji",
+    "color": "#81B29A"
+  },
+  {
+    "id": 7,
+    "name": "Grace",
+    "status": "On vacation 🏖️",
+    "avatar": "🏖️",
+    "avatarType": "emoji",
+    "color": "#5E8C61"
+  },
+  {
+    "id": 8,
+    "name": "Henry",
+    "status": "Coding...",
+    "avatar": "👨‍💻",
+    "avatarType": "emoji",
+    "color": "#7D4F50"
+  }
+]

@@ -15,10 +15,15 @@ import AddFriends from "./components/AddFriends";
 import Settings from "./components/Settings";
 import More from "./components/More";
 import ChatRoom from "./components/ChatRoom";
+import DevButton from "./components/DevButton";
 
 // Main App component that contains the layout
 function AppContent() {
   const [selectedItem, setSelectedItem] = useState(null);
+  const [mockMode, setMockMode] = useState(false);
+  const [mockData, setMockData] = useState(null);
+  const [dataRefreshTrigger, setDataRefreshTrigger] = useState(0);
+
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -44,6 +49,14 @@ function AppContent() {
     setSelectedItem(item);
   };
 
+  // Handle mock mode changes from DevButton
+  const handleMockModeChange = (newMockMode, newMockData = null) => {
+    setMockMode(newMockMode);
+    setMockData(newMockData);
+    setSelectedItem(null); // Clear selection when switching modes
+    setDataRefreshTrigger((prev) => prev + 1); // Trigger refresh
+  };
+
   return (
     <div className="app">
       {/* Left navigation bar */}
@@ -51,7 +64,9 @@ function AppContent() {
         {/* User avatar at top */}
         <div className="nav-user">
           <span className="material-icons nav-user-avatar">account_circle</span>
-          <div className="user-status">Available</div>
+          <div className="user-status">
+            {mockMode ? "🤖 Dev Mode" : "Available"}
+          </div>
         </div>
 
         {/* Navigation icons */}
@@ -105,6 +120,9 @@ function AppContent() {
         {/* Tab title */}
         <div className="sidebar-header">
           <h2>{TAB_CONFIG[currentPath]?.title || "LIHO"}</h2>
+          {mockMode && (
+            <div className="mock-mode-indicator">🤖 Mock Mode Active</div>
+          )}
         </div>
 
         {/* Routes for sidebar content */}
@@ -115,6 +133,9 @@ function AppContent() {
               <Friends
                 selectedItem={selectedItem}
                 onItemSelect={handleItemSelect}
+                mockMode={mockMode}
+                mockData={mockData}
+                refreshTrigger={dataRefreshTrigger}
               />
             }
           />
@@ -124,6 +145,9 @@ function AppContent() {
               <Chats
                 selectedItem={selectedItem}
                 onItemSelect={handleItemSelect}
+                mockMode={mockMode}
+                mockData={mockData}
+                refreshTrigger={dataRefreshTrigger}
               />
             }
           />
@@ -136,6 +160,9 @@ function AppContent() {
               <Chats
                 selectedItem={selectedItem}
                 onItemSelect={handleItemSelect}
+                mockMode={mockMode}
+                mockData={mockData}
+                refreshTrigger={dataRefreshTrigger}
               />
             }
           />
@@ -144,6 +171,9 @@ function AppContent() {
 
       {/* Chat area */}
       <ChatRoom selectedItem={selectedItem} />
+
+      {/* Floating Dev Button */}
+      <DevButton mockMode={mockMode} onMockModeChange={handleMockModeChange} />
     </div>
   );
 }

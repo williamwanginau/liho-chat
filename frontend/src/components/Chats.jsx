@@ -1,10 +1,26 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { useData } from "../hooks/useData";
 import ItemList from "./ItemList";
 
-const Chats = ({ selectedItem, onItemSelect }) => {
-  const { friendsData, groupsData, loading, error } = useData();
+const Chats = ({
+  selectedItem,
+  onItemSelect,
+  mockMode = false,
+  mockData = null,
+  refreshTrigger = 0,
+}) => {
+  const { friendsData, groupsData, loading, error, refreshData } = useData(
+    mockMode,
+    mockData
+  );
   const [searchTerm, setSearchTerm] = useState("");
+
+  // Handle refresh trigger from parent
+  useEffect(() => {
+    if (refreshTrigger > 0) {
+      refreshData();
+    }
+  }, [refreshTrigger]); // Remove refreshData from dependencies to prevent infinite loop
 
   const chatsList = useMemo(() => {
     if (!friendsData.length && !groupsData.length) return [];
@@ -13,7 +29,7 @@ const Chats = ({ selectedItem, onItemSelect }) => {
       {
         id: "friends-header",
         type: "category",
-        name: "Friends",
+        name: mockMode ? "Mock Friends" : "Friends",
         count: `(${friendsData.length})`,
       },
       ...friendsData,
@@ -25,29 +41,56 @@ const Chats = ({ selectedItem, onItemSelect }) => {
       },
       ...groupsData,
     ];
-  }, [friendsData, groupsData]);
+  }, [friendsData, groupsData, mockMode]);
 
   if (loading) {
-    return <div className="loading">Loading chats...</div>;
+    return (
+      <div className="loading">
+        <span className="loading-icon">🔄</span>
+        <p>Loading {mockMode ? "mock" : "chat"} data...</p>
+      </div>
+    );
   }
 
   if (error) {
     return (
       <div className="error">
         <p>❌ {error}</p>
-        <p>Please make sure the backend server is running on port 3001</p>
+        {!mockMode && (
+          <p>Please make sure the backend server is running on port 3001</p>
+        )}
+        <button onClick={refreshData} className="retry-button">
+          🔄 Retry
+        </button>
+      </div>
+    );
+  }
+
+  if (!mockMode && friendsData.length === 0 && groupsData.length === 0) {
+    return (
+      <div className="empty-state">
+        <div className="empty-icon">💬</div>
+        <h3>No chats yet</h3>
+        <p>Start a conversation with your friends!</p>
       </div>
     );
   }
 
   return (
-    <ItemList
-      items={chatsList}
-      onItemSelect={onItemSelect}
-      selectedItem={selectedItem}
-      searchTerm={searchTerm}
-      onSearchChange={setSearchTerm}
-    />
+    <div className="chats-container">
+      {mockMode && (
+        <div className="mock-mode-banner">
+          🤖 Mock Mode Active - Showing test data
+        </div>
+      )}
+      <ItemList
+        items={chatsList}
+        onItemSelect={onItemSelect}
+        selectedItem={selectedItem}
+        searchTerm={searchTerm}
+        onSearchChange={setSearchTerm}
+      />
+    </div>
   );
 };
 

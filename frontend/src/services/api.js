@@ -117,6 +117,15 @@ export const api = {
 
   // Health check
   health: () => apiClient.get("/health"),
+
+  // Development tools
+  dev: {
+    getMockFriends: () => apiClient.get("/dev/mock-friends"),
+    clearFriends: () => apiClient.post("/dev/clear-friends"),
+    resetFriends: () => apiClient.post("/dev/reset-friends"),
+    backupFriends: () => apiClient.post("/dev/backup-friends"),
+    getStatus: () => apiClient.get("/dev/status"),
+  },
 };
 
 // Export axios instance for direct use if needed
