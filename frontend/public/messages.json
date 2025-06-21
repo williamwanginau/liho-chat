@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "text": "Hey there! How's your day going?",
+    "sender": "other",
+    "timestamp": "11:21",
+    "avatar": "🤖"
+  },
+  {
+    "id": 2,
+    "text": "I was just thinking about our project",
+    "sender": "other",
+    "timestamp": "11:22",
+    "avatar": "🤖"
+  },
+  {
+    "id": 3,
+    "text": "Oh really? What about it?",
+    "sender": "me",
+    "timestamp": "8:03 PM",
+    "status": "read"
+  },
+  {
+    "id": 4,
+    "text": "I think we should try a different approach",
+    "sender": "me",
+    "timestamp": "8:03 PM",
+    "status": "read"
+  },
+  {
+    "id": 5,
+    "text": "Something more innovative maybe?",
+    "sender": "me",
+    "timestamp": "8:03 PM",
+    "status": "read"
+  },
+  {
+    "id": 6,
+    "text": "That sounds like a great idea! Let's discuss it tomorrow",
+    "sender": "other",
+    "timestamp": "8:05 PM",
+    "avatar": "🤖"
+  },
+  {
+    "id": 7,
+    "text": "Perfect! I'll prepare some ideas",
+    "sender": "me",
+    "timestamp": "8:06 PM",
+    "status": "read"
+  },
+  {
+    "id": 8,
+    "text": "Looking forward to it! 😊",
+    "sender": "other",
+    "timestamp": "8:07 PM",
+    "avatar": "🤖"
+  },
+  {
+    "id": 9,
+    "text": "By the way, did you see the latest updates?",
+    "sender": "other",
+    "timestamp": "8:10 PM",
+    "avatar": "🤖"
+  },
+  {
+    "id": 10,
+    "text": "Not yet, what's new?",
+    "sender": "me",
+    "timestamp": "8:11 PM",
+    "status": "read"
+  },
+  {
+    "id": 11,
+    "text": "They added some cool new features",
+    "sender": "other",
+    "timestamp": "8:12 PM",
+    "avatar": "🤖"
+  },
+  {
+    "id": 12,
+    "text": "Sounds interesting! I'll check them out later",
+    "sender": "me",
+    "timestamp": "8:13 PM",
+    "status": "delivered"
+  }
+]
